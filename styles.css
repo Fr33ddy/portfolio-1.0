@@ -29,19 +29,29 @@ body {
     overflow-x: hidden;
 }
 
+/* HEADER */
 header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 1rem 9%;
+    padding: 1.5rem 9%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 100;
-    background: transparent;
+    z-index: 1000;
+
+    background: rgba(11, 15, 26, 0.95);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid rgba(30, 144, 255, 0.2);
+
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
+/* LOGO */
 .logo {
     font-size: 3rem;
     font-weight: 800;
@@ -54,12 +64,13 @@ header {
     transform: scale(1.1);
 }
 
-
+/* NAVIGATION */
 nav a {
     font-size: 1.8rem;
     font-weight: 500;
     color: var(--text-light);
     margin-left: 4rem;
+    padding-bottom: 0.5rem;
     transition: 0.3s ease;
     border-bottom: 3px solid transparent;
 }
@@ -70,17 +81,25 @@ nav a.active {
     border-bottom: 3px solid var(--main-color);
 }
 
+/* SECTION SPACING */
+section {
+    min-height: 100vh;
+    padding: 12rem 9% 5rem;
+}
+
+/* MOBILE NAV */
 @media (max-width: 995px) {
     nav {
         display: none;
         position: absolute;
-        top: 0;
-        left: 0;
-        width: 45%;
+        top: 100%;
+        right: 2rem;
+        width: 250px;
         padding: 2rem;
-        background: #000;
-        border-top: 2px solid var(--main-color);
-        border-bottom-left-radius: 2rem;
+        background: rgba(11, 15, 26, 0.98);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(30, 144, 255, 0.2);
+        border-radius: 1rem;
     }
 
     nav.active {
@@ -89,11 +108,10 @@ nav a.active {
 
     nav a {
         display: block;
-        margin: 2rem 0;
-        font-size: 2rem;
+        margin: 1.5rem 0;
+        font-size: 1.8rem;
     }
 }
-
 section {
     min-height: 100vh;
     padding: 10rem 9% 5rem;
