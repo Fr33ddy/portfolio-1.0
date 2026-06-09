@@ -378,6 +378,15 @@ body {
     75%  { transform: translate(60px, -100px) scale(1.05); }
     100% { transform: translate(0, 0) scale(1); }
 }
+
+@keyframes floatCards {
+    0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-6px) rotate(0.5deg);
+    }
+}
 .services {
     padding: 10rem 9%;
     text-align: center;
@@ -392,6 +401,7 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 3rem;
+    align-items: start;
 }
 
 .service-card {
@@ -401,11 +411,26 @@ body {
     border-radius: 1.5rem;
     transition: 0.3s ease;
     backdrop-filter: blur(10px);
+    position: relative;
+    animation: floatCards 6s infinite ease-in-out;
+}
+
+.service-card:nth-child(odd) {
+    transform: translateY(-8px) rotate(-1deg);
+}
+
+.service-card:nth-child(even) {
+    transform: translateY(8px) rotate(1deg);
+}
+
+.service-card:nth-child(3n) {
+    transform: translateY(-14px) rotate(2deg);
 }
 
 .service-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 0 25px var(--main-color);
+    transform: translateY(-18px) rotate(0deg) scale(1.03);
+    box-shadow: 0 0 35px rgba(30,144,255,0.4);
+    z-index: 2;
 }
 
 .service-card i {
@@ -438,6 +463,7 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 2.5rem;
+    align-items: start;
 }
 
 
@@ -449,12 +475,26 @@ body {
     transition: 0.3s ease;
     backdrop-filter: blur(10px);
     cursor: pointer;
+    position: relative;
+    animation: floatCards 6s infinite ease-in-out;
 }
 
+.skill-card:nth-child(odd) {
+    transform: translateY(-8px) rotate(-1deg);
+}
+
+.skill-card:nth-child(even) {
+    transform: translateY(8px) rotate(1deg);
+}
+
+.skill-card:nth-child(3n) {
+    transform: translateY(-14px) rotate(2deg);
+}
 
 .skill-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 0 25px var(--main-color);
+    transform: translateY(-18px) rotate(0deg) scale(1.03);
+    box-shadow: 0 0 35px rgba(30,144,255,0.4);
+    z-index: 2;
 }
 
 
@@ -479,6 +519,7 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 3rem;
     margin-top: 5rem;
+    align-items: start;
 }
 
 
@@ -490,12 +531,26 @@ body {
     transition: 0.3s ease;
     backdrop-filter: blur(10px);
     text-align: left;
+    position: relative;
+    animation: floatCards 6s infinite ease-in-out;
 }
 
+.edu-card:nth-child(odd) {
+    transform: translateY(-8px) rotate(-1deg);
+}
+
+.edu-card:nth-child(even) {
+    transform: translateY(8px) rotate(1deg);
+}
+
+.edu-card:nth-child(3n) {
+    transform: translateY(-14px) rotate(2deg);
+}
 
 .edu-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 0 25px var(--main-color);
+    transform: translateY(-18px) rotate(0deg) scale(1.03);
+    box-shadow: 0 0 35px rgba(30,144,255,0.4);
+    z-index: 2;
 }
 
 
@@ -528,6 +583,7 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 3rem;
     margin-top: 5rem;
+    align-items: start;
 }
 
 
@@ -539,12 +595,26 @@ body {
     transition: 0.3s ease;
     backdrop-filter: blur(10px);
     text-align: left;
+    position: relative;
+    animation: floatCards 6s infinite ease-in-out;
 }
 
+.exp-card:nth-child(odd) {
+    transform: translateY(-8px) rotate(-1deg);
+}
+
+.exp-card:nth-child(even) {
+    transform: translateY(8px) rotate(1deg);
+}
+
+.exp-card:nth-child(3n) {
+    transform: translateY(-14px) rotate(2deg);
+}
 
 .exp-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 0 25px var(--main-color);
+    transform: translateY(-18px) rotate(0deg) scale(1.03);
+    box-shadow: 0 0 35px rgba(30,144,255,0.4);
+    z-index: 2;
 }
 
 
